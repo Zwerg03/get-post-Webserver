@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    /*Hintergrundfarbe*/
+    body{
+        background-color: rgb(32, 32, 32);
+    }
+
+    /*Hintergrund*/
+    .background {
+        width: 100%;
+        height: 96vh;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>\<line x1='20' y1='14' x2='20' y2='26' stroke='%232a2a2a' stroke-width='1'/>\<line x1='14' y1='20' x2='26' y2='20' stroke='%232a2a2a' stroke-width='1'/>\</svg>");
+        background-position: center;
+        display: flex;
+        justify-content: left; 
+    }
+
+    /*Schlossicon*/
+    .lock-icon{
+        height: 96px;
+        width: 96px;
+        margin-left: -10px;
+        margin-top: -4px;
+    }
+    .lock-button{
+        background-color: transparent;
+        border-style: solid ;
+        border-radius: 100px;
+        width: 90px;
+        height: 90px;
+        margin-top: 7px;
+        margin-left: 10px;
+    }
+    .lock-button-cont{
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: auto;
+    }
+
+    /*Servericon*/
+    .server-icon{
+        height: 86px;
+        width: 86px;
+        margin-left: -25px;
+        margin-bottom: -10px;
+    }
+    .server-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 230px;;
+        background-color: transparent;
+        font-size: 38px;
+        border-color: black;
+        border-style: solid;
+        margin-top: 13px;
+        margin-left: 30px;
+    }
+    .server-button-cont{
+        margin-top: -5px;
+    }
+    
+    /*Statuslabel*/
+    .statusSystem-cont{
+        height: 100%;
+        width: 100%;
+        margin-right: 371px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .status-label{
+        color: black;
+        font-size: 55px;
+    }
+    .status-punkt{
+        height: 12px;
+        width: 12px;
+        background-color: green;
+        border-radius: 50px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+    .status-variable{
+        color: green;
+        font-size: 19px;
+    }
+    .status-variable-cont{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*Systembutton*/
+    .system-button-cont{
+        display: flex;
+        margin-top: 240px;
+    }
+    .system-button{
+        background-color: transparent;
+        border-style: solid;
+        border-color: black;
+        font-size: 38px;
+        border-radius: 50px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: black;
+    }
+
+    .test1{
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+</style>
+<body>
+    {% load static %}
+    <div class="background">
+        
+        <div class="lock-button-cont">
+            <button onclick="LockClick()" class="lock-button"><img src="{% static 'img/lock-icon.png' %}" class="lock-icon" alt="lade-fehler"></button>
+        </div>
+
+        <div class="server-button-cont">
+            <button onclick="ServerClick()" class="server-button"><img src="{% static 'img/server-icon.png' %}" alt="Icon nicht geladen" class="server-icon">Server</button>
+        </div>
+
+        <div class="statusSystem-cont">
+            <label for="" class="status-label">Status</label>
+            <div class="status-variable-cont">
+                <div class="status-punkt"></div>
+                <label for="" class="status-variable">online</label>
+            </div>
+            <div class="system-button-cont">
+                <button class="system-button" onclick="SystemClick()">System</button>
+            </div>
+        </div>
+        
+    
+    </div>
+</body>
+<Script>
+    function LockClick(){
+        var output = "Schließe fenster"
+        console.log(output)
+    }
+    function ServerClick(){
+        var output = "zeige Server"
+        console.log(output)
+    }
+    function SystemClick(){
+        var output = "zeige System"
+        console.log(output)
+    }
+</Script>
+</html>
