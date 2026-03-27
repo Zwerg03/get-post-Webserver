@@ -71,9 +71,7 @@
     
     /*Statuslabel*/
     .statusSystem-cont{
-        height: 100%;
-        width: 100%;
-        margin-right: 371px;
+        margin-right: 0px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -117,9 +115,18 @@
         color: black;
     }
 
-    .test1{
-        background-color: rgb(255, 255, 255);
-        
+    .tools-button{
+        background-color: transparent;
+        rotate: -90deg;
+        border-style: solid;
+        font-size: 28px;
+        margin-left: 300px;
+        margin-top: 25%;
+        width: 110px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
 </style>
@@ -144,6 +151,10 @@
             <div class="system-button-cont">
                 <button class="system-button" onclick="SystemClick()">System</button>
             </div>
+        </div>
+        <div>
+            <button class="tools-button">Tools</button>
+            <button class="tools-button">Tools</button>
         </div>
         
     
